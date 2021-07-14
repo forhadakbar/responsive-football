@@ -12,11 +12,23 @@ body{
 h1{
     font-size: 64px;
     color: white;
+    font-weight: bold;
 }
 
 h2{
     font-size: 40px;
     color: #E02C6D;
+    text-align: center;
+}
+
+h3{
+    font-size: 28px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+h4{
+    font-size: 18px;
 }
 
 p{
@@ -24,22 +36,8 @@ p{
     color: #6C6C6C
 }
 
-.link-button{
-    text-decoration: none;
-    color: white;
-    background-color: #E02C6D;
-    font-size: 16px;
-    padding: 10px 24px;
-    text-align: center;
-    
-}
 
-.fa-arrow-right{
-    margin-left: 10px;
-    text-align: center;
-    font-size: 16px;
-}
-
+/* Main Section Styles */
 
 main{
     display: flex;
@@ -48,27 +46,62 @@ main{
     align-items: center;
 }
 
-/* First section Styles */
+/*Fist section with banner (Top banner section) styles*/
 
 .first-section{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: #2D25A0;
     width: 100%;
     height: 591px;
-    /* padding: 135px 140px 86px 156px; */
     align-items: center;
-    justify-content: space-evenly;
 }
 
+.banner-title{
+    margin-left: 156px;
+}
 
+.link-button{
+    text-decoration: none;
+    width: 168px;
+    height: 44px;
+    color: white;
+    background-color: #E02C6D;
+    font-size: 16px;
+    padding: 10px 24px;
+    text-align: center;
+    box-shadow: inset 0 0 0 0 yellow;
+    transition: ease-out 0.3s;
+    outline: none;
+}
 
-.half-width img{
+/* Transition effect on button hover */
+
+.link-button:hover{
+    box-shadow: inset 168px 0 0 0 yellow;
+    cursor: pointer;
+    color: black;
+}
+
+.fa-arrow-right{
+    margin-left: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.first-section img{
     width:556px;
     height: 438px;
 }
 
+/* Transition effect on banner image hover on anywhere in top section */
 
-/* Second Section styles */
+.first-section:hover.first-section img{
+    transform: scale(1.5);
+    transition: ease 1s;
+}
+
+/* Second section with footballer card styles */
 
 .second-section{
     display: grid;
@@ -91,7 +124,7 @@ main{
     text-align: center;
 }
 
-/* Third section */
+/* Third Section youtube video embedd styles */
 
 .third-section{
     display: grid;
@@ -99,4 +132,194 @@ main{
     grid-gap: 27px 30px;
     margin: 70px 0;
 
+}
+
+
+/* TETSTTTTTTTTTTTTT */
+
+.fourth-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 27px 100px;
+    margin: 0;
+
+}
+.article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article img{
+    width: 100%;
+    margin: 0;
+}
+
+.article p{
+    margin-left: 20px;
+}
+
+
+
+/* fifth Section Sponsors styles */
+
+.fifth-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.fifth-section a{
+    margin-right: 20px;
+}
+
+/* Footer Section */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 158px;
+    
+}
+
+footer img{
+    width: 483px;
+    height: 110px;
+
+}
+
+.social-icon{
+    display: flex;
+    width: 170px;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  
+.fab{
+    color: #969BAB;
+    font-size: 32px;
+}
+
+.fab:hover{
+color:  #E02C6D;
+}
+
+footer p{
+    color: black;
+    font-size: 18px;
+}
+
+/* Media Queary */
+
+/* Mobile devices */
+
+@media only screen and (max-width:688px) {
+
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    
+    .banner-title{
+        margin-left: 16px;
+    }
+
+    .first-section img{
+        width: 329px;
+        height: 260px;
+        margin-left: 16px;
+
+    }
+
+   .first-section,.second-section,.third-section,.flexible-container,.fourth-section{
+        width: 100%;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .second-section,.third-section{
+        margin: 47px 0;
+    }
+
+
+    .palyer-card{
+        justify-self: center;
+    }
+
+    .fifth-section,.article{
+        flex-direction: column;
+    }
+
+    .fifth-section a{
+        margin-bottom: 20px;
+    }
+
+
+    footer img{
+        width: 80%;
+    
+    }
+
+
+    
+}
+
+/* Tablet devices */
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    
+    .banner-title{
+        margin-left: 32px;
+    }
+
+    .first-section img{
+        width: 329px;
+        height: 260px;
+
+    }
+
+   .first-section,.second-section,.third-section,.fourth-section{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+
+    .second-section,.third-section{
+        margin: 47px 0;
+    }
+
+    .palyer-card{
+        justify-self: center;
+    }
+
+    .fifth-section,.article{
+        flex-direction: column;
+    }
+
+    .fifth-section a{
+        margin-bottom: 20px;
+    }
+
+
+    footer img{
+        width: 80%;
+    
+    }
+
+
+    
 }
